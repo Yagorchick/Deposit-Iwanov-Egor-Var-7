@@ -1,0 +1,15 @@
+C:\Users\chris\Desktop\Collage\Разработка программ (116)\Deposit Iwanov Egor\obj\Debug\Deposit Iwanov Egor.csproj.AssemblyReference.cache
+C:\Users\chris\Desktop\Collage\Разработка программ (116)\Deposit Iwanov Egor\obj\Debug\MainWindow.g.cs
+C:\Users\chris\Desktop\Collage\Разработка программ (116)\Deposit Iwanov Egor\obj\Debug\App.g.cs
+C:\Users\chris\Desktop\Collage\Разработка программ (116)\Deposit Iwanov Egor\obj\Debug\Deposit Iwanov Egor_MarkupCompile.cache
+C:\Users\chris\Desktop\Collage\Разработка программ (116)\Deposit Iwanov Egor\obj\Debug\Deposit Iwanov Egor_MarkupCompile.lref
+C:\Users\chris\Desktop\Collage\Разработка программ (116)\Deposit Iwanov Egor\bin\Debug\Deposit Iwanov Egor.exe.config
+C:\Users\chris\Desktop\Collage\Разработка программ (116)\Deposit Iwanov Egor\bin\Debug\Deposit Iwanov Egor.exe
+C:\Users\chris\Desktop\Collage\Разработка программ (116)\Deposit Iwanov Egor\bin\Debug\Deposit Iwanov Egor.pdb
+C:\Users\chris\Desktop\Collage\Разработка программ (116)\Deposit Iwanov Egor\obj\Debug\MainWindow.baml
+C:\Users\chris\Desktop\Collage\Разработка программ (116)\Deposit Iwanov Egor\obj\Debug\Deposit Iwanov Egor.g.resources
+C:\Users\chris\Desktop\Collage\Разработка программ (116)\Deposit Iwanov Egor\obj\Debug\Deposit_Iwanov_Egor.Properties.Resources.resources
+C:\Users\chris\Desktop\Collage\Разработка программ (116)\Deposit Iwanov Egor\obj\Debug\Deposit Iwanov Egor.csproj.GenerateResource.cache
+C:\Users\chris\Desktop\Collage\Разработка программ (116)\Deposit Iwanov Egor\obj\Debug\Deposit Iwanov Egor.csproj.CoreCompileInputs.cache
+C:\Users\chris\Desktop\Collage\Разработка программ (116)\Deposit Iwanov Egor\obj\Debug\Deposit Iwanov Egor.exe
+C:\Users\chris\Desktop\Collage\Разработка программ (116)\Deposit Iwanov Egor\obj\Debug\Deposit Iwanov Egor.pdb

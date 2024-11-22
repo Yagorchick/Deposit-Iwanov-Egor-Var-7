@@ -1,0 +1,31 @@
+﻿<Window x:Class="Deposit_Iwanov_Egor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Deposit_Iwanov_Egor"
+        mc:Ignorable="d"
+        Title="Управление Вкладами" Height="450" Width="500">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Введите имя вклада:" Margin="5"/>
+            <TextBox x:Name="DepositNameTextBox" Margin="5"/>
+
+            <TextBlock Text="Введите сумму вклада:" Margin="5"/>
+            <TextBox x:Name="DepositAmountTextBox" Margin="5"/>
+
+            <TextBlock Text="Введите процент:" Margin="5"/>
+            <TextBox x:Name="DepositInterestRateTextBox" Margin="5"/>
+
+            <TextBlock Text="Введите дату истечения (ДД:ММ:ГГГГ):" Margin="5"/>
+            <TextBox x:Name="DepositExpiryDateTextBox" Margin="5"/>
+
+            <Button Content="Добавить вклад" Margin="5" Click="AddDeposit"/>
+            <Button Content="Начислить проценты" Margin="5" Click="ApplyInterests"/>
+            <Button Content="Показать все вклады" Margin="5" Click="ShowDeposits"/>
+            <TextBlock x:Name="ResultTextBlock" Margin="5" Foreground="Black"/>
+
+            <ListBox x:Name="DepositsListBox" Margin="5" Height="200"/>
+        </StackPanel>
+    </Grid>
+</Window>
