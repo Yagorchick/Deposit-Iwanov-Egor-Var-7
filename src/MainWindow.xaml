@@ -5,20 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Deposit_Iwanov_Egor"
         mc:Ignorable="d"
-        Title="Управление Вкладами" Height="450" Width="500">
-    <Grid Margin="10">
+        Title="Управление Вкладами" Height="800" Width="500">
+    <Grid Margin="10" Background="Orange">
         <StackPanel>
             <TextBlock Text="Введите имя вклада:" Margin="5"/>
             <TextBox x:Name="DepositNameTextBox" Margin="5"/>
 
             <TextBlock Text="Введите сумму вклада:" Margin="5"/>
-            <TextBox x:Name="DepositAmountTextBox" Margin="5"/>
+            <TextBox x:Name="DepositAmountTextBox" Margin="5" InputScope="Number"/>
 
-            <TextBlock Text="Введите процент:" Margin="5"/>
-            <TextBox x:Name="DepositInterestRateTextBox" Margin="5"/>
+            <TextBlock Text="Способ установления процента:" Margin="5"/>
+            <ComboBox x:Name="InterestRateTypeComboBox" Margin="5">
+                <ComboBoxItem Content="Вручную"/>
+                <ComboBoxItem Content="Автоматически"/>
+            </ComboBox>
 
-            <TextBlock Text="Введите дату истечения (ДД:ММ:ГГГГ):" Margin="5"/>
-            <TextBox x:Name="DepositExpiryDateTextBox" Margin="5"/>
+            <TextBlock Text="Введите процент (или оставьте пустым для автоматического расчета):" Margin="5"/>
+            <TextBox x:Name="DepositInterestRateTextBox" Margin="5" InputScope="Number"/>
+
+
+            <TextBlock Text="Введите дату истечения (ДД.ММ.ГГГГ):" Margin="5"/>
+            <DatePicker x:Name="DepositExpiryDatePicker" Margin="5"/>
+
+            <TextBlock Text="Срок вклада (в месяцах):" Margin="5"/>
+            <TextBox x:Name="DepositTermTextBox" Margin="5" InputScope="Number"/>
+
+            <TextBlock Text="Кэшбек:" Margin="5"/>
+            <TextBox x:Name="CashbackTextBox" Margin="5" InputScope="Number"/>
+
+            <TextBlock Text="Неснимаемый остаток:" Margin="5"/>
+            <TextBox x:Name="NonRemovableBalanceTextBox" Margin="5" InputScope="Number"/>
+
 
             <Button Content="Добавить вклад" Margin="5" Click="AddDeposit"/>
             <Button Content="Начислить проценты" Margin="5" Click="ApplyInterests"/>

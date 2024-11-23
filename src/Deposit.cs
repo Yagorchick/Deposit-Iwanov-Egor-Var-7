@@ -11,33 +11,37 @@ namespace Deposit_Iwanov_Egor
         public string Name { get; set; }
         public decimal Amount { get; set; }
         public decimal InterestRate { get; set; }
-        public DateTime ExpirationDate { get; set; }
+        public DateTime ExpiryDate { get; set; }
+        public int TermMonths { get; set; }
+        public decimal Cashback { get; set; }
+        public decimal NonRemovableBalance { get; set; }
+        public string InterestRateType { get; set; }
 
-        public bool IsExpired => DateTime.Now > ExpirationDate;
-
-        public bool IsExpiringSoon => !IsExpired && (ExpirationDate - DateTime.Now).TotalDays < 5;
-
-        public void AddAmount(decimal amount)
+        public Deposit(string name, decimal amount, decimal interestRate, DateTime expiryDate, int termMonths, decimal cashback, decimal nonRemovableBalance, string interestRateType)
         {
-            Amount += amount;
+            Name = name;
+            Amount = amount;
+            InterestRate = interestRate;
+            ExpiryDate = expiryDate;
+            TermMonths = termMonths;
+            Cashback = cashback;
+            NonRemovableBalance = nonRemovableBalance;
+            InterestRateType = interestRateType;
         }
 
-        public bool WithdrawAmount(decimal amount)
+        public void CalculateInterest()
         {
-            if (amount <= Amount)
+            if (InterestRateType == "Автоматически")
             {
-                Amount -= amount;
-                return true;
+                InterestRate = (decimal)(TermMonths * 0.005);
+                if (InterestRate > 0.15m) InterestRate = 0.15m;
             }
-            return false;
+            Amount += Amount * InterestRate;
         }
 
-        public void ApplyInterest()
+        public override string ToString()
         {
-            if (!IsExpired)
-            {
-                Amount += Amount * InterestRate / 100;
-            }
+            return $"Название: {Name}, Сумма: {Amount:C}, Процент: {InterestRate:P}, Дата истечения: {ExpiryDate.ToShortDateString()}, Срок: {TermMonths} мес., Кэшбек: {Cashback:C}, Неснимаемый остаток: {NonRemovableBalance:C}";
         }
     }
 }
